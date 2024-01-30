@@ -20,7 +20,7 @@
       enable = true;
     };
     # wireless = {
-    # enable = true;
+    #   enable = true;
     # };
   };
 

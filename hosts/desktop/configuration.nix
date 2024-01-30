@@ -31,10 +31,14 @@
       amreed = {
         isNormalUser = true;
         description = "Aiden";
+	extraGroups = [];
+	packages = with pkgs; [];
       };
       gcreed = {
         isNormalUser = true;
         description = "Gavin";
+	extraGroups = [];
+	packages = with pkgs; [];
       };
     };
   };

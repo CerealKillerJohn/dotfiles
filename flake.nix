@@ -8,7 +8,8 @@
     nixvim = {
       url = "github:nix-community/nixvim";
     };
-    nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/a136def4f7256146b32e3625e53dcdf7464165f9";
+    # nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
     sops-nix.url = "github:Mic92/sops-nix";
     # optional, not necessary for the module
     # sops-nix.inputs.nixpkgs.follows = "nixpkgs";
