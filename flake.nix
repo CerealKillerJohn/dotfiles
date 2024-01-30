@@ -18,48 +18,49 @@
     self,
     nixpkgs,
     ...
-  }:
-
-  {
+  }: {
     nixosConfigurations = let
-      user = "jwrhine";
-      mkHost = host:
+      lib = nixpkgs.lib;
+      mkHost = host: users:
         nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
 
           specialArgs = {
-            inherit (nixpkgs) lib;
-            inherit inputs nixpkgs system user host;
+            inherit inputs lib nixpkgs system host users;
           };
 
           modules = [
-	    inputs.home-manager.nixosModules.home-manager
-	    inputs.impermanence.nixosModules.impermanence
+            inputs.home-manager.nixosModules.home-manager
+            inputs.impermanence.nixosModules.impermanence
             inputs.sops-nix.nixosModules.sops
             {
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                extraSpecialArgs = {inherit host user;};
-                users.${user} = {
-                  imports = [
-                    inputs.nixvim.homeManagerModules.nixvim
-                    # common home-manager configuration
-                    ./home-manager/home.nix
-                    # host specific home-manager configuration
-                    # ./hosts/${host}/home.nix
-                  ];
+                extraSpecialArgs = {inherit host users;};
+                users = lib.listToAttrs (map (user: {
+                    name = user;
+                    value = {
+                      imports = [
+                        inputs.nixvim.homeManagerModules.nixvim
+                        # common home-manager configuration
+                        ./home-manager/home.nix
+                        # host specific home-manager configuration
+                        # ./hosts/${host}/home.nix
+                      ];
 
-                  home = {
-                    username = user;
-                    homeDirectory = "/home/${user}";
-                    # do not change this value
-                    stateVersion = "23.11";
-                  };
+                      home = {
+                        username = user;
+                        homeDirectory = "/home/${user}";
+                        # do not change this value
+                        stateVersion = "23.11";
+                      };
 
-                  # Let Home Manager install and manage itself.
-                  programs.home-manager.enable = true;
-                };
+                      # Let Home Manager install and manage itself.
+                      programs.home-manager.enable = true;
+                    };
+                  })
+                  users);
               };
             }
             # common configuration
@@ -73,11 +74,10 @@
     in {
       # update with `nix flake update`
       # rebuild with `nixos-rebuild switch --flake .#latitude`
-      latitude = mkHost "latitude";
+      latitude = mkHost "latitude" ["jwrhine"];
       # update with `nix flake update`
       # rebuild with `nixos-rebuild switch --flake .#desktop`
-      desktop = mkHost "desktop";
+      desktop = mkHost "desktop" ["jwrhine" "user1"];
     };
-
-      };
-    }
+  };
+}

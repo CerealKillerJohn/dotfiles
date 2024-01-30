@@ -1,11 +1,9 @@
-{pkgs, user, ...}:
-
-{
+{...}: {
   programs = {
-    firefox= {
+    firefox = {
       enable = true;
       profiles = {
-        ${user} = {
+        jwrhine = {
           settings = {
             "browser.startup.homepage" = "mail.proton.me";
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
@@ -25,7 +23,6 @@
               overflow: visible !important;
             }
           '';
-
         };
       };
     };

@@ -1,29 +1,32 @@
-{ config, pkgs, lib, ... }:
-
 {
-  imports =
-    [ 
-      ./default.nix
-    ];
+  config,
+  pkgs,
+  lib,
+  users,
+  ...
+}: {
+  imports = [
+    ./default.nix
+  ];
 
   boot = {
     tmp = {
       cleanOnBoot = true;
-      };
+    };
   };
 
   networking = {
     networkmanager = {
       enable = true;
-    };  
+    };
     # wireless = {
-      # enable = true;
-    # };  
+    # enable = true;
+    # };
   };
 
   time = {
     timeZone = "America/New_York";
-  };  
+  };
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
@@ -47,7 +50,7 @@
       xkbVariant = "";
       # remove xterm by default
       excludePackages = [pkgs.xterm];
-    };  
+    };
   };
 
   hardware = {
@@ -55,19 +58,18 @@
   };
 
   users = {
-    users = {
-      jwrhine = {
-        isNormalUser = true;
-	description = "John";
-	extraGroups = [
-	  "networkmanager"
-	  "users"
-	  "wheel"
-	];
-	packages = with pkgs; [];
-      };
-    };
-  };  
+    users = lib.listToAttrs (map (user: {
+        name = user;
+        value = {
+          isNormalUser = true;
+          description = "John";
+          extraGroups =
+            ["networkmanager" "users"]
+            ++ lib.optionals (user == "jwrhine") ["wheel"];
+        };
+      })
+      users);
+  };
 
   system = {
     # do not change this value
