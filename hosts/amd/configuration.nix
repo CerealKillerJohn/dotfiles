@@ -28,7 +28,7 @@
   };
 
   networking = {
-    hostName = "latitude";
+    hostName = "amd";
   };
 
   services = {
