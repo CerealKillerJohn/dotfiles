@@ -22,7 +22,7 @@
 
     colorschemes.gruvbox = {
       enable = true;
-      italicizeComments = true;
+      italicize_comments = true;
       # flavour = "mocha";
       # transparentBackground = true;
     };
