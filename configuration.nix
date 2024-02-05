@@ -82,6 +82,7 @@
       e2fsprogs
       fastfetch
       floorp
+      librewolf
       lsd
       neofetch
       # fix nix package count for nitch
