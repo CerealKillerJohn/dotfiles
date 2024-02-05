@@ -17,7 +17,7 @@
         devices = ["nodev"];
         efiSupport = true;
         extraEntries = ''
-          menuentry "Windows 10" {
+          menuentry "Windows 11" {
             insmod part_gpt
             insmod fat
             insmod search_fs_uuid
