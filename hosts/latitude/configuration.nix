@@ -21,10 +21,10 @@
       };
     };
     kernelParams = ["quiet"];
-#    plymouth = {
-#      enable = true;
-#      theme = "breeze";
-#    };
+    plymouth = {
+      enable = true;
+      theme = "breeze";
+    };
   };
 
   networking = {
