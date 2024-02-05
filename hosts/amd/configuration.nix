@@ -27,7 +27,6 @@
           }
         '';
       };
-      kernelParams = ["quiet"];
       plymouth = {
         enable = true;
         theme = "breeze";
