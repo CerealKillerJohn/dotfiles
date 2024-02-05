@@ -6,6 +6,13 @@
   ];
 
   boot = {
+    kernelParams = [ "quiet" "splash" ];
+    plymouth = {
+      enable = true;
+      theme = "breeze";
+    };
+    consoleLogLevel = 0;
+    initrd.verbose = false;
     tmp = {
       cleanOnBoot = true;
       };
