@@ -16,7 +16,7 @@
             (languagetool.overrideAttrs {meta.license.free = true;}) #
             (momentumdash.overrideAttrs {meta.license.free = true;})
             privacy-badger
-            purple-ads-blocker # doesn't exist yet
+            purpleadblock # doesn't exist yet
             sponsorblock #
             steam-database
             to-google-translate # doesn't exist yet
