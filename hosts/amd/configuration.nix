@@ -8,22 +8,30 @@
 
   boot = {
     loader = {
-      systemd-boot = {
-        enable = true;
-      };
       efi = {
         canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
       };
-    };
-    initrd = {
-      systemd = {
+      grub = {
         enable = true;
+        devices = ["nodev"];
+        efiSupport = true;
+        extraEntries = ''
+          menuentry "Windows 10" {
+            insmod part_gpt
+            insmod fat
+            insmod search_fs_uuid
+            insmod chain
+            search --fs-uuid --set=root 2017-287E
+            chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+          }
+        '';
       };
-    };
-    kernelParams = ["quiet"];
-    plymouth = {
-      enable = true;
-      theme = "breeze";
+      kernelParams = ["quiet"];
+      plymouth = {
+        enable = true;
+        theme = "breeze";
+      };
     };
   };
 
