@@ -16,14 +16,14 @@
         enable = true;
         devices = ["nodev"];
         efiSupport = true;
-        useOSProber = true;
+#        useOSProber = true;
         extraEntries = ''
-          menuentry "Windows 11" {
+          menuentry "Windows" {
             insmod part_gpt
             insmod fat
             insmod search_fs_uuid
             insmod chain
-            search --fs-uuid --set=root 2017-287E
+            search --fs-uuid --set=root 58A4-B1AE
             chainloader /EFI/Microsoft/Boot/bootmgfw.efi
           }
         '';
