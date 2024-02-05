@@ -16,6 +16,7 @@
         enable = true;
         devices = ["nodev"];
         efiSupport = true;
+        useOSProber = true;
         extraEntries = ''
           menuentry "Windows 11" {
             insmod part_gpt
