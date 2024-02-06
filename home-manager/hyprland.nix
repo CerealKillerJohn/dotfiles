@@ -138,68 +138,68 @@
                 windowrulev2 = float,class:^(kitty)$,title:^(ranger)$
 
                 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
-                $mainMod = SUPER
+                $mod = SUPER
                 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-                bind = $mainMod, W, exec, firefox
-                bind = $mainMod, M, exec, spotifywm
-                bind = $mainMod, E, exec, librewolf
-                bind = $mainMod, F, exec, kitty -e ranger
-                bind = $mainMod, D, exec, webcord
-                bind = $mainMod, L, exec, ./.local/bin/powermenu.sh
-                bind = $mainMod, T, exec, ./.local/bin/time-date
-                bind = $mainMod, C, exec, ./.local/bin/weather bind = $mainMod, S, exec, ./.local/bin/sys-stats
-                bind = $mainMod, Return, exec, kitty
+                bind = $mod, W, exec, firefox
+                bind = $mod, M, exec, spotifywm
+                bind = $mod, E, exec, librewolf
+                bind = $mod, F, exec, kitty -e ranger
+                bind = $mod, D, exec, webcord
+                bind = $mod, L, exec, ./.local/bin/powermenu.sh
+                bind = $mod, T, exec, ./.local/bin/time-date
+                bind = $mod, C, exec, ./.local/bin/weather bind = $mainMod, S, exec, ./.local/bin/sys-stats
+                bind = $mod, Return, exec, kitty
                 bind =, Print, exec, grim -g "$(slurp)"
-                bind = $mainMod, Q, killactive,
-                bind = $mainMod, Escape, exit,
-                bind = $mainMod SHIFT, F, exec, thunar
-                bind = $mainMod, V, togglefloating,
-                bind = $mainMod SHIFT, R, exec, dmenu-wl_run -b
-                bind = $mainMod, R, exec, rofi -show drun -disable-history
-                bind = $mainMod, P, pseudo, # dwindle
-                bind = $mainMod, J, togglesplit, # dwindle
+                bind = $mod, Q, killactive,
+                bind = $mod, Escape, exit,
+                bind = $mod SHIFT, F, exec, thunar
+                bind = $mod, V, togglefloating,
+                bind = $mod SHIFT, R, exec, dmenu-wl_run -b
+                bind = $mod, R, exec, rofi -show drun -disable-history
+                bind = $mod, P, pseudo, # dwindle
+                bind = $mod, J, togglesplit, # dwindle
 
                 # Move focus with mainMod + arrow keys
-                bind = $mainMod, left, movefocus, l
-                bind = $mainMod, right, movefocus, r
-                bind = $mainMod, up, movefocus, u
-                bind = $mainMod, down, movefocus, d
+                bind = $mod, left, movefocus, l
+                bind = $mod, right, movefocus, r
+                bind = $mod, up, movefocus, u
+                bind = $mod, down, movefocus, d
 
                 # Switch workspaces with mainMod + [0-9]
-                bind = $mainMod, 1, workspace, 1
-                bind = $mainMod, 2, workspace, 2
-                bind = $mainMod, 3, workspace, 3
-                bind = $mainMod, 4, workspace, 4
-                bind = $mainMod, 5, workspace, 5
-                bind = $mainMod, 6, workspace, 6
-                bind = $mainMod, 7, workspace, 7
-                bind = $mainMod, 8, workspace, 8
-                bind = $mainMod, 9, workspace, 9
-                bind = $mainMod, 0, workspace, 10
-                bind = $mainMod, minus, workspace, 11
-                bind = $mainMod, equal, workspace, 12
+                bind = $mod, 1, workspace, 1
+                bind = $mod, 2, workspace, 2
+                bind = $mod, 3, workspace, 3
+                bind = $mod, 4, workspace, 4
+                bind = $mod, 5, workspace, 5
+                bind = $mod, 6, workspace, 6
+                bind = $mod, 7, workspace, 7
+                bind = $mod, 8, workspace, 8
+                bind = $mod, 9, workspace, 9
+                bind = $mod, 0, workspace, 10
+                bind = $mod, minus, workspace, 11
+                bind = $mod, equal, workspace, 12
 
                 # Move active window to a workspace with mainMod + SHIFT + [0-9]
-                bind = $mainMod SHIFT, 1, movetoworkspace, 1
-                bind = $mainMod SHIFT, 2, movetoworkspace, 2
-                bind = $mainMod SHIFT, 3, movetoworkspace, 3
-                bind = $mainMod SHIFT, 4, movetoworkspace, 4
-                bind = $mainMod SHIFT, 5, movetoworkspace, 5
-                bind = $mainMod SHIFT, 6, movetoworkspace, 6
-                bind = $mainMod SHIFT, 7, movetoworkspace, 7
-                bind = $mainMod SHIFT, 8, movetoworkspace, 8
-                bind = $mainMod SHIFT, 9, movetoworkspace, 9
-                bind = $mainMod SHIFT, 0, movetoworkspace, 10
-                bind = $mainMod SHIFT, minus, movetoworkspace, 11
-                bind = $mainMod SHIFT, equal, movetoworkspace, 12
+                bind = $mod SHIFT, 1, movetoworkspace, 1
+                bind = $mod SHIFT, 2, movetoworkspace, 2
+                bind = $mod SHIFT, 3, movetoworkspace, 3
+                bind = $mod SHIFT, 4, movetoworkspace, 4
+                bind = $mod SHIFT, 5, movetoworkspace, 5
+                bind = $mod SHIFT, 6, movetoworkspace, 6
+                bind = $mod SHIFT, 7, movetoworkspace, 7
+                bind = $mod SHIFT, 8, movetoworkspace, 8
+                bind = $mod SHIFT, 9, movetoworkspace, 9
+                bind = $mod SHIFT, 0, movetoworkspace, 10
+                bind = $mod SHIFT, minus, movetoworkspace, 11
+                bind = $mod SHIFT, equal, movetoworkspace, 12
 
                 # Scroll through existing workspaces with mainMod + scroll
-                bind = $mainMod, mouse_down, workspace, e+1
-                bind = $mainMod, mouse_up, workspace, e-1
+                bind = $mod, mouse_down, workspace, e+1
+                bind = $mod, mouse_up, workspace, e-1
 
                 # Move/resize windows with mainMod + LMB/RMB and dragging
-                bindm = $mainMod, mouse:272, movewindow
-                bindm = $mainMod, mouse:273, resizewindow
+                bindm = $mod, mouse:272, movewindow
+                bindm = $mod, mouse:273, resizewindow
 
                 # Function Keys & Scripts
 
