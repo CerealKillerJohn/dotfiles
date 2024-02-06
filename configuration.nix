@@ -7,12 +7,6 @@
 
   boot = {
     kernelParams = [ "quiet" "splash" ];
-#    plymouth = {
-#      enable = true;
-#      theme = "breeze";
-#    };
-#    consoleLogLevel = 0;
-#    initrd.verbose = false;
     tmp = {
       cleanOnBoot = true;
       };
@@ -78,21 +72,14 @@
       btop
       cbonsai
       cmatrix
-      etcher
-      e2fsprogs
       fastfetch
-      floorp
       inputs.iynaix.packages.x86_64-linux.wfetch
       librewolf
       lsd
       neofetch
-      # fix nix package count for nitch
-      (pkgs.nitch.overrideAttrs (o: {
-	patches = (o.patches or []) ++ [./patches/nitch-nix-pkgs-count.patch];
-      }))
+      (pkgs.nitch.overrideAttrs (o: {patches = (o.patches or []) ++ [./patches/nitch-nix-pkgs-count.patch];})) # fix nix package count for nitch
       ripgrep
       sops
-      unetbootin
       wallust
       webcord
       wget
