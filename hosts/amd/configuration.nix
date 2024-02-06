@@ -39,7 +39,7 @@
     settings = rec {
       initial_session = {
         command = "Hyprland";
-        user = "myuser";
+        user = "jwrhine";
       };
       default_session = initial_session;
     };
