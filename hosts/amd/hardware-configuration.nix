@@ -20,16 +20,79 @@
     };
   };
 
-  swapDevices = [ ];
+  fileSystems."/" =
+    { device = "tmpfs";
+      fsType = "tmpfs";
+    };
+
+  fileSystems."/persist" =
+    { device = "zroot/persist";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home" =
+    { device = "zroot/home";
+      fsType = "zfs";
+    };
+
+  fileSystems."/nix" =
+    { device = "zroot/nix";
+      fsType = "zfs";
+    };
+
+  fileSystems."/var/log" =
+    { device = "/persist/var/log";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/etc/NetworkManager/system-connections" =
+    { device = "/persist/etc/NetworkManager/system-connections";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/etc/ssh" =
+    { device = "/persist/etc/ssh";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/var/lib/docker" =
+    { device = "/persist/var/lib/docker";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/persist/cache" =
+    { device = "zroot/cache";
+      fsType = "zfs";
+    };
+
+  fileSystems."/tmp" =
+    { device = "zroot/tmp";
+      fsType = "zfs";
+    };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/3F48-3110";
+      fsType = "vfat";
+    };
+
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/0c7af436-6443-4cc3-b761-3c48422f2859"; }
+    ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp30s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.tailscale0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp3s0f0u6.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
-
