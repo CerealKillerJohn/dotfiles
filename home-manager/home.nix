@@ -4,7 +4,6 @@
   imports = [
     ./dunst.nix
     ./firefox.nix
-    ./hyprland.nix
     ./mako.nix
     ./shell
   ];
