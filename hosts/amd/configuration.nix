@@ -34,7 +34,18 @@
     hostName = "amd";
   };
 
-  services = {
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "Hyprland";
+        user = "myuser";
+      };
+      default_session = initial_session;
+    };
+  };
+
+#  services = {
 #    xserver = {
 #      displayManager = {
 #        autoLogin = {
@@ -42,10 +53,10 @@
 #        };
 #      };
 #    };
-    getty = {
-      autologinUser = "jwrhine";
-    };
-  };
+#    getty = {
+#      autologinUser = "jwrhine";
+#    };
+#  };
 
   hardware = {
     bluetooth = {
