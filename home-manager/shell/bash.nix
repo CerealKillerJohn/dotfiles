@@ -5,7 +5,8 @@
     bash = {
       enable = true;
       initExtra = ''
-        nitch
+#        nitch
+        wfetch --challenge --challenge-timestamp 1676062449 --wallpaper
         cat ~/.cache/wallust/sequences
       '';
     };
