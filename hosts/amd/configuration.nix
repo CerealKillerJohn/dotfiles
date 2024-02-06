@@ -35,13 +35,13 @@
   };
 
   services = {
-    xserver = {
-      displayManager = {
-        autoLogin = {
-	  user = "jwrhine";
-        };
-      };
-    };
+#    xserver = {
+#      displayManager = {
+#        autoLogin = {
+#	  user = "jwrhine";
+#        };
+#      };
+#    };
     getty = {
       autologinUser = "jwrhine";
     };
