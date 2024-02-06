@@ -5,7 +5,10 @@ _:
     windowManager = {
       hyprland = {
         enable = true;
-        systemdIntegration = true;
+        package = pkgs.hyprland;
+        xwayland = {
+          enable = true;
+        };
         extraConfig = ''
           # See https://wiki.hyprland.org/Configuring/Monitors/
 
@@ -13,7 +16,7 @@ _:
 
           # Execute your favorite apps at launch
 
-          exec-once=./.local/bin/random-wallpaper
+          # exec-once=./.local/bin/random-wallpaper
           # exec-once=/usr/lib/polkit-kde-authentication-agent-1
 
           # exec-once = waybar & blueman-applet # & hyprpaper & firefox
