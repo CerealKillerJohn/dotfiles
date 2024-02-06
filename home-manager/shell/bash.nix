@@ -6,7 +6,7 @@
       enable = true;
       initExtra = ''
 #        nitch
-        wfetch --challenge --challenge-timestamp 1676062449 --wallpaper
+        wfetch --challenge --challenge-timestamp 1676062449 --wallpaper --exit
         cat ~/.cache/wallust/sequences
       '';
     };
