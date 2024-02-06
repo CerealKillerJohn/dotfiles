@@ -11,6 +11,10 @@
     impermanence = {
       url = "github:nix-community/impermanence";
     };
+    iynaix = {
+      url = "github:iynaix/dotfiles";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixvim = {
       url = "github:nix-community/nixvim";
     };

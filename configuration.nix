@@ -82,6 +82,7 @@
       e2fsprogs
       fastfetch
       floorp
+      inputs.iynaix.packages.x86_64-linux.wfetch
       librewolf
       lsd
       neofetch
