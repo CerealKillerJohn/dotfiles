@@ -3,6 +3,7 @@
 let sys-stats = pkgs.writeShellApplication {
     name = "sys-stats";
     runtimeInputs = [
+        pkgs.lm_sensors
         pkgs.mako
     ];
     text = ''
