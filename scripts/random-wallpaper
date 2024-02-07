@@ -15,7 +15,7 @@ let random-wallpaper = pkgs.writeShellApplication {
 
       echo -ne "preload = $wallpaper \n \n wallpaper = ${monitor},$wallpaper" > ~/.config/hypr/hyprpaper.conf
 
-      hyprpaper
+      hyprpaper &
 
       wallust "$HOME/Pictures/Wallpapers/$wallpaper"
     '';
