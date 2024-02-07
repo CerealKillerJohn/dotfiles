@@ -3,6 +3,7 @@
 let vol-up = pkgs.writeShellApplication {
     name = "vol-up";
     runtimeInputs = [
+      pkgs.mako
       pkgs.pamixer
     ];
     text = ''

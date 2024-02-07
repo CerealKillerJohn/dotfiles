@@ -3,6 +3,7 @@
 let vol-mute = pkgs.writeShellApplication {
     name = "vol-mute";
     runtimeInputs = [
+      pkgs.mako
       pkgs.pamixer
     ];
     text = ''
