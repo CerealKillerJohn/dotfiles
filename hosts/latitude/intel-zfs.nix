@@ -4,7 +4,6 @@
   # booting with zfs
   boot = {
     supportedFilesystems = ["zfs"];
-    zfs.devNodes = lib.mkDefault "/dev/disk/by-id";
     kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
     zfs.requestEncryptionCredentials = true;
   };

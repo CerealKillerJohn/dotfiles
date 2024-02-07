@@ -72,7 +72,6 @@
       btop
       cbonsai
       cmatrix
-      fastfetch
       gimp
       inputs.wfetch.packages.${pkgs.system}.default
       librewolf

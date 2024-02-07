@@ -11,7 +11,6 @@
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       distrobox
       fractal
-      gimp
       glib
       ifuse
       jq

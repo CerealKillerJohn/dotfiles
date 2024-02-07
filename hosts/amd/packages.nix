@@ -8,6 +8,7 @@
 #      (callPackage ../../packages/bar-protonmail/bar-protonmail.nix {})
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       distrobox
+      dolphin
       fractal
       glib
       grim
