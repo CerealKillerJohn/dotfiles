@@ -3,7 +3,7 @@ _:
 {
   imports = [
     ./audio-mic-mute
-    ./powermenu.
+    ./powermenu
     ./random-wallpaper
     ./sys-stats
     ./time-date
