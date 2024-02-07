@@ -22,7 +22,7 @@ let powermenu = pkgs.writeShellApplication {
      $shutdown" | rofi -dmenu\
                        -i\
                        -p "Power"\
-                       -config "~/.local/bin/powermenu.rasi"\
+                       -config "$HOME/dotfiles/scripts/powermenu.rasi"\
                        -font "JetBrainsMono 14"\
                        -width "15"\
                        -lines 5\
