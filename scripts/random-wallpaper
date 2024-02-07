@@ -14,7 +14,7 @@ let random-wallpaper = pkgs.writeShellApplication {
 
       hyprpaper
 
-      wallust Pictures/Wallpapers/$wallpaper
+      wallust "$HOME/Pictures/Wallpapers/$wallpaper"
     '';
 }; in {
     home.packages = [random-wallpaper];
