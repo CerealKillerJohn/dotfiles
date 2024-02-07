@@ -5,7 +5,7 @@ _:
     ./audio-mic-mute
     ./powermenu
     ./random-wallpaper
-    # ./sys-stats
+    ./sys-stats
     ./time-date
     ./vol-down
     ./vol-mute
