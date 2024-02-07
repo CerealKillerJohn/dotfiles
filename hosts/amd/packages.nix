@@ -25,12 +25,12 @@
       spotify
       spotifywm
       swappy
-      thunar
       usbmuxd
       wl-clipboard
       wlogout
       wlr-randr
       wofi
+      xfce.thunar
       ];
   };
 }
