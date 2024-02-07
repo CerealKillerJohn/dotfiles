@@ -5,6 +5,7 @@ _: {
     ./git.nix
     ./nh.nix
     ./nix.nix
+    ./numlock.nix
     ./printing.nix
     ./sops.nix
     # ./tailscale.nix
