@@ -1,9 +1,15 @@
-#!/usr/bin/env bash
+random-wallpaper = pkgs.writeShellApplication {
+    name = "random-wallpaper";
+    runtimeInputs = [pkgs.hyprpaper];
+    text = let
+      monitor = if host == "amd" then "HDMI-A-1" else "eDP-1";
+    in ''
+      wallpaper=$(find ~/Pictures/Wallpapers/ -type f | shuf --random-source=/dev/urandom -n 1)
 
-wallpaper=$(find ~/Pictures/Wallpapers/ -type f | shuf --random-source=/dev/urandom -n 1)
+      echo $wallpaper
 
-echo $wallpaper
+      echo -ne "preload = $wallpaper \n \n wallpaper = ${monitor},$wallpaper" > ~/.config/hypr/hyprpaper.conf
 
-echo -ne "preload = $wallpaper \n \n wallpaper = HDMI-A-1,$wallpaper" > ~/.config/hypr/hyprpaper.conf
-
-hyprpaper
+      hyprpaper
+    '';
+}
