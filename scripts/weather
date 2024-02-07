@@ -1,27 +1,37 @@
-#!/usr/bin/env bash
+{host, pkgs, ...}:
 
-notify-send -t 10000 "$(curl -s 'wttr.in/?format=%c+%C+and:+%t+\n+🌬️+%w+and+feels+like:+%f+\n+💧+%h+Humidity+🌧️+%p')"
-#
-#    c    Weather condition,
-#    C    Weather condition textual name,
-#    x    Weather condition, plain-text symbol,
-#    h    Humidity,
-#    t    Temperature (Actual),
-#    f    Temperature (Feels Like),
-#    w    Wind,
-#    l    Location,
-#    m    Moon phase 🌑🌒🌓🌔🌕🌖🌗🌘,
-#    M    Moon day,
-#    p    Precipitation (mm/3 hours),
-#    P    Pressure (hPa),
-#    u    UV index (1-12),
-#
-#    D    Dawn*,
-#    S    Sunrise*,
-#    z    Zenith*,
-#    s    Sunset*,
-#    d    Dusk*,
-#    T    Current time*,
-#    Z    Local timezone.
-#
-# (*times are shown in the local timezone)
+let weather = pkgs.writeShellApplication {
+    name = "weather";
+    runtimeInputs = [
+      pkgs.mako
+    ];
+    text = ''
+      notify-send -t 10000 "$(curl -s 'wttr.in/?format=%c+%C+and:+%t+\n+🌬️+%w+and+feels+like:+%f+\n+💧+%h+Humidity+🌧️+%p')"
+      #
+      #    c    Weather condition,
+      #    C    Weather condition textual name,
+      #    x    Weather condition, plain-text symbol,
+      #    h    Humidity,
+      #    t    Temperature (Actual),
+      #    f    Temperature (Feels Like),
+      #    w    Wind,
+      #    l    Location,
+      #    m    Moon phase 🌑🌒🌓🌔🌕🌖🌗🌘,
+      #    M    Moon day,
+      #    p    Precipitation (mm/3 hours),
+      #    P    Pressure (hPa),
+      #    u    UV index (1-12),
+      #
+      #    D    Dawn*,
+      #    S    Sunrise*,
+      #    z    Zenith*,
+      #    s    Sunset*,
+      #    d    Dusk*,
+      #    T    Current time*,
+      #    Z    Local timezone.
+      #
+      # (*times are shown in the local timezone)
+    '';
+}; in {
+    home.packages = [weather];
+}

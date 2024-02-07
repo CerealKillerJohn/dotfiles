@@ -14,4 +14,3 @@ let vol-up = pkgs.writeShellApplication {
 }; in {
     home.packages = [vol-up];
 }
-

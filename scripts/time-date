@@ -1,3 +1,13 @@
-#!/usr/bin/env bash
+{host, pkgs, ...}:
 
-notify-send -t 5000 "🗓️ $(date "+%A, %b %-d") ⏰$(date "+%l:%M %P")"
+let time-date = pkgs.writeShellApplication {
+    name = "time-date";
+    runtimeInputs = [
+      pkgs.mako
+    ];
+    text = ''
+     notify-send -t 5000 "🗓️ $(date "+%A, %b %-d") ⏰$(date "+%l:%M %P")"
+    '';
+}; in {
+    home.packages = [time-date];
+}

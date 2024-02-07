@@ -1,10 +1,21 @@
-#!/usr/bin/env bash
+{host, pkgs, ...}:
 
-pamixer --default-source -t
+let audio-mic-mute = pkgs.writeShellApplication {
+    name = "audio-mic-mute";
+    runtimeInputs = [
+      pkgs.mako
+      pkgs.pamixer
+    ];
+    text = ''
+      pamixer --default-source -t
 
-if [ "$(pamixer --default-source --get-mute)" = true ]; then
-    makoctl dismiss -a
-	notify-send "MIC MUTED"
-else
-	notify-send -u critical "LIVE MIC"
-fi
+      if [ "$(pamixer --default-source --get-mute)" = true ]; then
+        makoctl dismiss -a
+          notify-send "MIC MUTED"
+      else
+        notify-send -u critical "LIVE MIC"
+      fi
+    '';
+}; in {
+    home.packages = [audio-mic-mute];
+}
