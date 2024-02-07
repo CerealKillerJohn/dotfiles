@@ -50,6 +50,7 @@
 	        inputs.impermanence.nixosModules.impermanence
             inputs.sops-nix.nixosModules.sops
             ./modules/nixos
+            ./scripts
 #            ./overlays
             {
               home-manager = {

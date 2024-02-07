@@ -1,4 +1,4 @@
-random-wallpaper = pkgs.writeShellApplication {
+let random-wallpaper = pkgs.writeShellApplication {
     name = "random-wallpaper";
     runtimeInputs = [pkgs.hyprpaper];
     text = let
@@ -12,4 +12,6 @@ random-wallpaper = pkgs.writeShellApplication {
 
       hyprpaper
     '';
+}; in {
+    home.packages = [random-wallpaper];
 }

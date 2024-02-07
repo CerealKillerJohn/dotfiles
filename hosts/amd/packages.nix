@@ -11,6 +11,7 @@
       fractal
       gimp
       glib
+      hyprpaper
       ifuse
       jq
       libimobiledevice
