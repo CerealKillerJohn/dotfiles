@@ -1,0 +1,19 @@
+{host, pkgs, ...}:
+
+let sys-stats = pkgs.writeShellApplication {
+    name = "sys-stats";
+    runtimeInputs = [
+      pkgs.mako
+    ];
+    text = ''
+     CPUTemp=$(sensors | grep 'CPU:' | awk '{ print substr ($0, 12 ) }')
+
+     notify-send -t 8000 "$(
+     printf "🌡️ CPU: $CPUTemp\n"
+     top -bn1 | grep load | awk '{printf "🧠 Load: %.2f\n", $(NF-2)}'
+     free -m | awk 'NR==2{printf "🐏 Usage: %.2f / %.0f GB (%.2f%%)\n", $3/1024,$2/1024,($3/$2)*100} '
+     )"
+    '';
+}; in {
+    home.packages = [sys-stats];
+}

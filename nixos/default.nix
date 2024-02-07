@@ -7,6 +7,6 @@ _: {
     ./nix.nix
     ./printing.nix
     ./sops.nix
-    ./tailscale.nix
+    # ./tailscale.nix
   ];
 }
