@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{host, pkgs, ...}:
 
 let random-wallpaper = pkgs.writeShellApplication {
     name = "random-wallpaper";
