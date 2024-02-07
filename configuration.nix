@@ -73,7 +73,7 @@
       cbonsai
       cmatrix
       fastfetch
-      inputs.iynaix.packages.x86_64-linux.wfetch
+      inputs.wfetch.packages.x86_64.default
       librewolf
       lsd
       neofetch
