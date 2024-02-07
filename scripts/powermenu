@@ -3,7 +3,7 @@
 let powermenu = pkgs.writeShellApplication {
     name = "powermenu";
     runtimeInputs = [
-      pkgs.amixer
+      pkgs.pamixer
       pkgs.rofi
     ];
     text = ''
