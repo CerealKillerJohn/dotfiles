@@ -1,9 +1,19 @@
-#!/usr/bin/env bash
+{host, pkgs, ...}:
 
-pamixer -t
+let vol-mute = pkgs.writeShellApplication {
+    name = "vol-mute";
+    runtimeInputs = [
+      pkgs.pamixer
+    ];
+    text = ''
+      pamixer -t
 
-if [ "$(pamixer --get-mute)" = true ]; then
-    notify-send "VOLUME : MUTED"
-else
-    notify-send "VOLUME : $(pamixer --get-volume) %"
-fi
+      if [ "$(pamixer --get-mute)" = true ]; then
+        notify-send "VOLUME : MUTED"
+      else
+        notify-send "VOLUME : $(pamixer --get-volume) %"
+      fi
+    '';
+}; in {
+    home.packages = [vol-mute];
+}

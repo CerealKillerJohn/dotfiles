@@ -1,5 +1,16 @@
-#!/usr/bin/env bash
+{host, pkgs, ...}:
 
-pamixer -d 5
-sleep 0.5
-notify-send -t 1000 "$( pamixer --get-volume ) %"
+let vol-down = pkgs.writeShellApplication {
+    name = "vol-down";
+    runtimeInputs = [
+      pkgs.pamixer
+    ];
+    text = ''
+      pamixer -d 5
+      sleep 0.5
+      notify-send -t 1000 "$( pamixer --get-volume ) %"
+    '';
+}; in {
+    home.packages = [vol-down];
+}
+
