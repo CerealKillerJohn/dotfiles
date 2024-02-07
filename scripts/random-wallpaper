@@ -2,7 +2,10 @@
 
 let random-wallpaper = pkgs.writeShellApplication {
     name = "random-wallpaper";
-    runtimeInputs = [pkgs.hyprpaper];
+    runtimeInputs = [
+      pkgs.hyprpaper
+      pkgs.wallust
+    ];
     text = let
       monitor = if host == "amd" then "HDMI-A-1" else "eDP-1";
     in ''
