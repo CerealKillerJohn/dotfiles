@@ -9,9 +9,8 @@
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       distrobox
       fractal
-      gimp
       glib
-      hyprpaper
+      grim
       ifuse
       jq
       libimobiledevice
@@ -20,8 +19,8 @@
       mpv
       obs-studio
       pkgs.python311Full
-      plymouth
       ranger
+      slurp
       spotify
       spotifywm
       swappy
@@ -30,7 +29,6 @@
       wlogout
       wlr-randr
       wofi
-      zoom-us
       ];
   };
 }
