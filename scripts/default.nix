@@ -19,5 +19,5 @@ _:
     ./vol-mute
     ./vol-up
     ./weather
-  ]
+  ];
 }
