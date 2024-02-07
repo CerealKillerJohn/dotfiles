@@ -1,3 +1,5 @@
+{pkgs, ...}:
+
 let random-wallpaper = pkgs.writeShellApplication {
     name = "random-wallpaper";
     runtimeInputs = [pkgs.hyprpaper];
