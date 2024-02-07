@@ -4,6 +4,6 @@ wallpaper=$(find ~/Pictures/Wallpapers/ -type f | shuf --random-source=/dev/uran
 
 echo $wallpaper
 
-echo -ne "preload = $wallpaper \n \n wallpaper = eDP-1,$wallpaper" > ~/.config/hypr/hyprpaper.conf
+echo -ne "preload = $wallpaper \n \n wallpaper = HDMI-A-1,$wallpaper" > ~/.config/hypr/hyprpaper.conf
 
 hyprpaper
