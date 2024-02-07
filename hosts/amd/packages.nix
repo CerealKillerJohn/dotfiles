@@ -25,6 +25,7 @@
       spotify
       spotifywm
       swappy
+      thunar
       usbmuxd
       wl-clipboard
       wlogout

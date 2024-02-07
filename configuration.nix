@@ -74,9 +74,11 @@
       cmatrix
       gimp
       inputs.wfetch.packages.${pkgs.system}.default
+      libreoffice
       librewolf
       lsd
       neofetch
+      pavucontrol
       (pkgs.nitch.overrideAttrs (o: {patches = (o.patches or []) ++ [./patches/nitch-nix-pkgs-count.patch];})) # fix nix package count for nitch
       plymouth
       ripgrep
