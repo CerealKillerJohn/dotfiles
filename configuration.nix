@@ -73,7 +73,7 @@
       cbonsai
       cmatrix
       fastfetch
-      inputs.wfetch.packages.x86_64.default
+      inputs.wfetch.packages.${pkgs.system}.default
       librewolf
       lsd
       neofetch
