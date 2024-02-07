@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./dunst.nix
+#    ./dunst.nix
     ./firefox.nix
     ./mako.nix
     ./shell
