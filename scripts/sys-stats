@@ -5,6 +5,7 @@ let sys-stats = pkgs.writeShellApplication {
     runtimeInputs = [
         pkgs.lm_sensors
         pkgs.mako
+        pkgs.procps
     ];
     text = ''
         CPUTemp=$(sensors | grep 'CPU:' | awk '{ print substr ($0, 12 ) }')
