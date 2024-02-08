@@ -97,7 +97,6 @@
 	  hashedPasswordFile = config.sops.secrets.rp.path;
 	};
       jwrhine = {
-        shell = pkgs.fish;
         isNormalUser = true;
 	    description = "John";
 	    initialPassword = "password";
