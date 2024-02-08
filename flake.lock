@@ -573,11 +573,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1707320621,
-        "narHash": "sha256-enKYtJvU2cWtCB4/dlw430iBCyLP7BZljWYqD4LYAmI=",
+        "lastModified": 1707358556,
+        "narHash": "sha256-0ANeAAtTWaWDDKeHPOHdQE7Tw/buHaD9HhqcQBN4c5I=",
         "owner": "iynaix",
         "repo": "wfetch",
-        "rev": "d717c349957d6bf5457b56d77d4cd92182375639",
+        "rev": "a6bff84a9bf4fc7ccdaa0ff1c2a1836963398357",
         "type": "github"
       },
       "original": {
