@@ -36,6 +36,7 @@
         };
         webmail = {
           isDefault = false;
+          id = 1;
           extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
             bitwarden
             cookie-autodelete
