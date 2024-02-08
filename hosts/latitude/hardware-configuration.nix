@@ -10,7 +10,7 @@
 
   boot = {
     extraModulePackages = [ ];
-    initrd + {
+    initrd = {
       availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
       kernelModules = [ ];
     };
