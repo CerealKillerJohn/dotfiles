@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, users, ... }:
 
 {
   imports = [
@@ -63,7 +63,7 @@
 
   users = {
     users = {
-      jwrhine = {
+      ${user} = {
         shell = pkgs.fish;
       };
     };
