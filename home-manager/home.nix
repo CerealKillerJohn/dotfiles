@@ -18,10 +18,6 @@
         source = ./doom;
         recursive = true;
       };
-      "fastfetch" = {
-        source = ./fastfetch;
-        recursive = true;
-      };
       "hypr" = {
         source = ./hypr;
         recursive = true;
@@ -46,10 +42,6 @@
         source = ./qtile;
         recursive = true;
       };
-      "ranger" = {
-        source = ./ranger;
-        recursive = true;
-      };
       "rofi" = {
         source = ./rofi;
         recursive = true;
@@ -65,6 +57,14 @@
       "waybar" = {
         source = ./waybar;
         recursive = true;
+      };
+    };
+  };
+
+  users = {
+    users = {
+      jwrhine = {
+        shell = pkgs.fish;
       };
     };
   };
