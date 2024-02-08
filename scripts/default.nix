@@ -3,6 +3,7 @@ _:
 {
   imports = [
     ./audio-mic-mute
+    ./kitty-opacity
     ./powermenu
     ./random-wallpaper
     ./sys-stats
