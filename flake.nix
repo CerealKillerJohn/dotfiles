@@ -93,8 +93,8 @@
       # update with `nix flake update`
       # rebuild with `nixos-rebuild switch --flake .#amd`
       amd = mkHost "amd";
-      # rebuild with `nixos-rebuild switch --flake .#desktop`
-      desktop = mkHost "desktop";
+      # rebuild with `nixos-rebuild switch --flake .#frankenstein`
+      frankenstein = mkHost "frankenstein";
       # rebuild with `nixos-rebuild switch --flake .#latitude`
       latitude = mkHost "latitude";
     };
