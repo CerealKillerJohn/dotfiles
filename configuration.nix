@@ -98,15 +98,15 @@
 	};
       jwrhine = {
         isNormalUser = true;
-	description = "John";
-	initialPassword = "password";
-	hashedPasswordFile = config.sops.secrets.up.path;
-	extraGroups = [
-	 "networkmanager"
-	 "users"
-	 "wheel"
-	];
-	packages = with pkgs; [];
+	    description = "John";
+	    initialPassword = "password";
+	    hashedPasswordFile = config.sops.secrets.up.path;
+	    extraGroups = [
+	      "networkmanager"
+	      "users"
+	      "wheel"
+	    ];
+	    packages = with pkgs; [];
       };
     };
   };

@@ -17,6 +17,7 @@
       libimobiledevice
       libnotify
       lm_sensors
+      lutris
       mpv
       obs-studio
       pkgs.python311Full
