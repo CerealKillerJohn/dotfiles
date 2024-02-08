@@ -11,7 +11,7 @@
 
       # text-alignment=center;
 
-      defaultTimeout = 120;
+      defaultTimeout = 8000;
       layer = "overlay";
       anchor = "top-center";
       backgroundColor = "#1e1e2ecc";
@@ -21,17 +21,17 @@
       extraConfig = ''
         [urgency=low]
         border-color=#313244
-        default-timeout=2000
+        default-timeout=5000
         [urgency=normal]
         border-color=#313244
-        default-timeout=5000
+        default-timeout=10000
         [urgency=high]
         border-color=#FF0000
         text-color=#FF0000
         default-timeout=0
         [category=mpd]
         border-color=#f9e2af
-        default-timeout=2000
+        default-timeout=5000
         group-by=category
       '';
     };
