@@ -33,6 +33,7 @@
             "extensions.pocket.enabled" = false;
 #             "media.ffmpeg.vaapi.enabled" = true;
           };
+        };
         webmail = {
           isDefault = false;
           extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
