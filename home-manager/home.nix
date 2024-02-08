@@ -61,13 +61,11 @@
     };
   };
 
-  home = {
     username = {
       ${user} = {
         shell = pkgs.fish;
       };
     };
-  };
 
   home.stateVersion = "23.11";
 }
