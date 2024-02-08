@@ -17,7 +17,7 @@
   };
 
   networking = {
-    hostName = "kids-desktop";
+    hostName = "frankenstein";
   };
 
   users = {
