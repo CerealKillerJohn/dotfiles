@@ -20,7 +20,6 @@
       mpv
       obs-studio
       pkgs.python311Full
-      ranger
       slurp
       spotify
       spotifywm

@@ -22,7 +22,6 @@
       parsec-bin
       pkgs.python311Full
       plymouth
-      ranger
       spotify
       spotifywm
       swappy
