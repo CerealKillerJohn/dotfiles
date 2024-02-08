@@ -61,8 +61,8 @@
     };
   };
 
-  users = {
-    users = {
+  home = {
+    username = {
       ${user} = {
         shell = pkgs.fish;
       };
