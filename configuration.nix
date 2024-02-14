@@ -26,7 +26,6 @@
   };
 
   time = {
-    hardwareClockInLocalTime = true;
     timeZone = "America/New_York";
   };
 
@@ -72,6 +71,7 @@
       btop
       cbonsai
       cmatrix
+      etcher
       gimp
       inputs.wfetch.packages.${pkgs.system}.default
       libreoffice
@@ -83,6 +83,7 @@
       plymouth
       ripgrep
       sops
+      ventoy-full
       wallust
       webcord
       wget
