@@ -17,6 +17,7 @@
     kernelModules = [ "kvm-intel" "wl" ];
     zfs = {
       devNodes = lib.mkDefault "/dev/disk/by-id";
+      enableUnstable = true;
     };
   };
 
