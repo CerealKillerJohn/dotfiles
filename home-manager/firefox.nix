@@ -11,7 +11,6 @@
             bitwarden
             cookie-autodelete
             (enhancer-for-youtube.overrideAttrs {meta.license.free = true;})
-            facebook-container #
             (grammarly.overrideAttrs {meta.license.free = true;}) #
             hulu-ad-blocker
             (languagetool.overrideAttrs {meta.license.free = true;}) #

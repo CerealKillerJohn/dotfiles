@@ -17,6 +17,7 @@
     kernelModules = [ "kvm-amd" ];
     zfs = {
       devNodes = lib.mkDefault "/dev/disk/by-partuuid";
+      enableUnstable = true;
     };
   };
 

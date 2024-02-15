@@ -27,6 +27,7 @@
 
   time = {
     timeZone = "America/New_York";
+    hardwareClockInLocalTime = true;
   };
 
   i18n = {
