@@ -22,7 +22,7 @@
             insmod fat
             insmod search_fs_uuid
             insmod chain
-            search --fs-uuid --set=root 9E0A-C145
+            search --fs-uuid --set=root 30BB-183F
             chainloader /EFI/Microsoft/Boot/bootmgfw.efi
           }
         '';
