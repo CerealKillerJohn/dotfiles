@@ -16,7 +16,6 @@ _: {
           rust-analyzer = {
             enable = true;
             # autostart = false;
-            installLanguageServer = false;
             cmd = null;
             installCargo = false;
             installRustc = false;
