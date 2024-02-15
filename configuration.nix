@@ -83,6 +83,7 @@
       plymouth
       ripgrep
       sops
+      unzip
       ventoy-full
       wallust
       webcord
