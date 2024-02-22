@@ -10,7 +10,6 @@
 #      (callPackage ../../packages/bar-protonmail/bar-protonmail.nix {})
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       distrobox
-      fractal
       glib
       ifuse
       jq
