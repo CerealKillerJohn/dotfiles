@@ -72,7 +72,7 @@
       btop
       cbonsai
       cmatrix
-      etcher
+#      etcher
       gimp
       inputs.wfetch.packages.${pkgs.system}.default
       libreoffice

@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   programs.nixvim = {
     plugins = {
       bufferline.enable = true;
@@ -10,7 +11,6 @@
       fugitive.enable = true;
       gitsigns.enable = true;
       # harpoon.enable = true;
-
       lualine.enable = true;
       luasnip.enable = true;
       nvim-autopairs.enable = true;
@@ -72,38 +72,38 @@
         extensions = {
           fzf-native.enable = true;
         };
-        keymaps = {
-          "<leader>pf" = {
-            action = "git_files";
-            desc = "Telescope git files";
-          };
-          "<leader>fc" = {
-            action = "git_status";
-            desc = "Telescope git status";
-          };
-          "<leader>fb" = {
-            action = "buffers";
-            desc = "Telescope buffers";
-          };
-          "<leader>fr" = {
-            action = "oldfiles";
-            desc = "Telescope recent files";
-          };
-          "<leader>fq" = {
-            action = "quickfix";
-            desc = "Telescope quickfix";
-          };
-          "<leader>gb" = {
-            action = "git_branches";
-            desc = "Telescope git branches";
-          };
-          "<leader>/" = {
-            action = "live_grep";
-            desc = "Telescope grep";
-          };
+#        keymaps = {
+#          "<leader>pf" = {
+#            action = "git_files";
+#            desc = "Telescope git files";
+#          };
+#          "<leader>fc" = {
+#            action = "git_status";
+#            desc = "Telescope git status";
+#          };
+#          "<leader>fb" = {
+#            action = "buffers";
+#            desc = "Telescope buffers";
+#          };
+#          "<leader>fr" = {
+#            action = "oldfiles";
+#            desc = "Telescope recent files";
+#          };
+#          "<leader>fq" = {
+#            action = "quickfix";
+#            desc = "Telescope quickfix";
+#          };
+#          "<leader>gb" = {
+#            action = "git_branches";
+#            desc = "Telescope git branches";
+#          };
+#          "<leader>/" = {
+#            action = "live_grep";
+#            desc = "Telescope grep";
+#          };
           # TODO: harpoon marks?
           # TODO: tmux windows?
-        };
+#        };
       };
 
       # trouble.enable = true;
