@@ -10,6 +10,7 @@
 #      (callPackage ../../packages/bar-protonmail/bar-protonmail.nix {})
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       distrobox
+      etcher
       glib
       ifuse
       jq
@@ -29,6 +30,7 @@
       wlogout
       wlr-randr
       wofi
+      ventoy
       zoom-us
       ];
   };
