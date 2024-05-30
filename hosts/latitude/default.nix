@@ -11,7 +11,7 @@ _:
       ./impermanence.nix
       ./intel-zfs.nix
       ./packages.nix
-      ./qtile
+      ./qtile.nix
       ./steam.nix
       ./virt-manager.nix
     ];
