@@ -7,11 +7,11 @@ _:
       ./emacs.nix
       ./flatpak.nix
 #      ./gnome.nix
-#      ./hyprland.nix
+      ./hyprland.nix
       ./impermanence.nix
       ./intel-zfs.nix
       ./packages.nix
-      ./qtile.nix
+#      ./qtile.nix
       ./steam.nix
       ./virt-manager.nix
     ];
