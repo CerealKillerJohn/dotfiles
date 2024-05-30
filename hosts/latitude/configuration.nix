@@ -31,18 +31,29 @@
     hostName = "latitude";
   };
 
-  services = {
-    xserver = {
-      displayManager = {
-        autoLogin = {
-	  user = "jwrhine";
-        };
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "Hyprland";
+        user = "jwrhine";
       };
-    };
-    getty = {
-      autologinUser = "jwrhine";
+      default_session = initial_session;
     };
   };
+
+#  services = {
+#    xserver = {
+#      displayManager = {
+#        autoLogin = {
+#	  user = "jwrhine";
+#        };
+#      };
+#    };
+#    getty = {
+#      autologinUser = "jwrhine";
+#    };
+#  };
 
   hardware = {
     bluetooth = {

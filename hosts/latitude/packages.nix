@@ -10,8 +10,8 @@
 #      (callPackage ../../packages/bar-protonmail/bar-protonmail.nix {})
       (callPackage ../../packages/boxbuddyrs/boxbuddyrs.nix {})
       distrobox
-      etcher
       glib
+      grim
       ifuse
       jq
       libimobiledevice
@@ -22,6 +22,7 @@
       parsec-bin
       pkgs.python311Full
       plymouth
+      slurp
       spotify
       spotifywm
       swappy
