@@ -10,7 +10,7 @@
             qtile-extras
           ];
         };
-        backend = wayland;
+        backend = "wayland";
       };
     };
   };
