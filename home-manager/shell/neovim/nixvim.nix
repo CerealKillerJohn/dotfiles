@@ -8,6 +8,8 @@
     ./plugins.nix
   ];
 
+  config = {
+
   programs.nixvim = {
     enable = true;
 
@@ -116,4 +118,6 @@
 #      ".local/state/nvim" # persistent session info
 #    ];
 #  };
+};
+
 }
